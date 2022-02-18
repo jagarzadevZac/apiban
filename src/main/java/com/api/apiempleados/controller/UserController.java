@@ -56,6 +56,14 @@ public class UserController {
         
     }
 
+    @GetMapping("/find/{correo}")
+    public ResponseEntity<User> findUserByCorreo(@PathVariable("correo")  String correo){
+        
+        User user = userService.findUserByCorreo(correo);
+        return new ResponseEntity<User>(user,OK);
+        
+    }
+
    
 
     @PostMapping("/create")

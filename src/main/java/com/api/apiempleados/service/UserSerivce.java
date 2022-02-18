@@ -46,4 +46,8 @@ public class UserSerivce {
     public boolean existsByCorreo(String correo){
         return userRepository.existsByCorreo(correo);
     }
+
+    public User findUserByCorreo(String correo){
+        return userRepository.findByCorreo(correo);
+    }
 }
